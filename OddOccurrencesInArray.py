@@ -1,4 +1,19 @@
 def solution(A):
+
+    freq = {} 
+    for num in A: 
+        if (num in freq): 
+            freq[num] += 1
+        else: 
+            freq[num] = 1
+    
+    for key, value in freq.items():
+        if value % 2 == 1:
+            return key
+ #task score 100% , correctness 100%, performance 100%
+
+
+def solution(A):
     A.sort()
 
     def delDouble(A):
@@ -19,3 +34,4 @@ def solution(A):
     
     
     #task score 66% , correctness 100%, performance 25%
+    #conclusion: operate the list,such as del list[i] is not a good idea.
